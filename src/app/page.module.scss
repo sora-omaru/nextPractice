@@ -1,0 +1,31 @@
+.title {
+  color: #54472d;
+  text-align: center;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  aspect-ratio: 7 / 1;
+
+  /* 会社コードのパターンに合わせて CSS 変数で背景指定 */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--nav-main-url);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.main {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+}
