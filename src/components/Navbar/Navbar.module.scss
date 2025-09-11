@@ -1,0 +1,27 @@
+.navbar {
+display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  aspect-ratio: 7 / 1;
+
+  /* 会社コードのパターンに合わせて CSS 変数で背景指定 */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--nav-main-url);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.navContent{
+display: flex;
+gap: 1rem;
+list-style: none;
+margin: 0;
+padding: 0;
+}

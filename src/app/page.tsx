@@ -1,8 +1,12 @@
+import Navbar from "@/components/Navbar/Navbar";
+import styles from "./page.module.scss";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Hello world</h1>
-      <p>This is my first Pull Request!</p>
+    <main className={styles.main}>
+      <Navbar/>
+      <h1 className={styles.title}>Hello world</h1>
+     
     </main>
   );
 }

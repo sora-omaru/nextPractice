@@ -1,0 +1,11 @@
+:root{
+  --base-bg-url:url('https://i.pinimg.com/1200x/8e/31/3b/8e313bb9fa6c9ec03579f7b4536a2cb4.jpg')
+}
+
+body {
+  background-image: var(--base-bg-url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100dvh;
+  margin: 0; /* 念のため */
+}
