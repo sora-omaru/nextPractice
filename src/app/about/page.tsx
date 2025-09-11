@@ -1,4 +1,5 @@
-import style from './about.module.scss'
+//次回改修時、スタイル充てる
+// import styles from './about.module.scss'
 
 export default function About(){
     return(
