@@ -15,11 +15,13 @@ display: flex;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    z-index: 0;
   }
 }
 
 .navContent{
 display: flex;
+z-index: 1;
 gap: 1rem;
 list-style: none;
 margin: 0;
