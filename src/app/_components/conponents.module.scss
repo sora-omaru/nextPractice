@@ -1,0 +1,68 @@
+.fit {
+    width: 100%;
+    height: auto;
+}
+
+@mixin imgPosition($width, $top, $left) {
+    position: absolute;
+    width: $width;
+    top: $top;
+    left: $left;
+}
+
+@mixin addShow {
+    opacity: 0;
+    transition: all 1s;
+
+    &.show {
+        opacity: 1;
+    }
+}
+@mixin addShowLong {
+    opacity: 0;
+    transition: all 2s;
+
+    &.showLong {
+        opacity: 1;
+    }
+}
+@mixin addShowShort {
+    opacity: 0;
+    transition: all 300ms;
+
+    &.showShort {
+        opacity: 1;
+    }
+}
+
+@mixin addHide {
+    opacity: 1;
+    transition: all 1s;
+
+    &.hide {
+        opacity: 0;
+    }
+}
+@mixin textFade {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+    will-change: clip-path, opacity;
+    transition: opacity 0.5s ease-out, clip-path 1.5s ease-out 0.5s;
+    &.slide {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade-move {
+    to {
+        transform: translate(var(--dx), var(--dy));
+        opacity: 0;
+    }
+}
+@mixin cloudFadeMove($duration: 1s, $delay: 0s) {
+    opacity: 1;
+    will-change: transform, opacity;
+    animation: fade-move #{$duration} ease-out #{$delay} forwards;
+}
